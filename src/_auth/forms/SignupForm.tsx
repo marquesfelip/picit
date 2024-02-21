@@ -1,6 +1,6 @@
-import * as z from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Link } from 'react-router-dom'
+import * as z from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Link } from "react-router-dom"
 import {
   Form,
   FormControl,
@@ -8,12 +8,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { useForm } from 'react-hook-form'
-import { SignupValidation } from '@/lib/validation'
-import Loader from '@/components/shared/Loader'
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { useForm } from "react-hook-form"
+import { SignupValidation } from "@/lib/validation"
+import Loader from "@/components/shared/Loader"
 
 const SignupForm = () => {
   const isLoading = false
@@ -21,10 +21,10 @@ const SignupForm = () => {
   const form = useForm<z.infer<typeof SignupValidation>>({
     resolver: zodResolver(SignupValidation),
     defaultValues: {
-      name: '',
-      username: '',
-      email: '',
-      password: '',
+      name: "",
+      username: "",
+      email: "",
+      password: "",
     },
   })
 
@@ -40,7 +40,7 @@ const SignupForm = () => {
           Create a new account
         </h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">
-          To use polaphoto, please enter your details
+          To use picit, please enter your details
         </p>
 
         <form
@@ -106,7 +106,7 @@ const SignupForm = () => {
                 Loading...
               </div>
             ) : (
-              'Sign Up'
+              "Sign Up"
             )}
           </Button>
           <p className="text-small-regular text-light-2 text-center mt-2">
