@@ -5,6 +5,7 @@ import SignupForm from './_auth/forms/SignupForm'
 import { Home } from './_root/pages'
 import AuthLayout from './_auth/AuthLayout'
 import RootLayout from './_root/RootLayout'
+import { Toaster } from '@/components/ui/toaster'
 
 const App = () => {
   return (
@@ -17,12 +18,14 @@ const App = () => {
         </Route>
 
         {/* private routes */}
-        <Route element={<RootLayout/>}>
+        <Route element={<RootLayout />}>
           <Route index element={<Home />} />
         </Route>
       </Routes>
-    </main>
-    )
-  }
 
-  export default App
+      <Toaster />
+    </main>
+  )
+}
+
+export default App
